@@ -1,0 +1,5 @@
+objective,loocv_mae,loocv_rmse,loocv_r2,fitted_kernel,training_samples
+annual_cost_inr,1153580.0890588532,1759885.408847241,0.9201954781714669,"3.67**2 * Matern(length_scale=[0.128, 5.52, 18.5, 6.41, 24.2, 100, 1.62, 100, 100, 66.9], nu=2.5) + WhiteKernel(noise_level=0.000171)",55
+S45,1.5146321346974247,2.5277743991368933,0.9586280992410021,"1.22**2 * Matern(length_scale=[0.122, 0.248, 2.12, 6.79, 100, 7.69, 15, 100, 3.83, 30.9], nu=2.5) + WhiteKernel(noise_level=0.00149)",55
+road_fallback_share,0.02069798102209678,0.031127725472538257,0.9394907812750802,"1.82**2 * Matern(length_scale=[0.0317, 1.4, 4.34, 1.91, 100, 100, 1.36, 100, 87.7, 22.9], nu=2.5) + WhiteKernel(noise_level=0.000386)",55
+em_p95_min,0.0,0.0,1.0,"0.0316**2 * Matern(length_scale=[100, 100, 100, 100, 100, 100, 100, 100, 100, 100], nu=2.5) + WhiteKernel(noise_level=1e-08)",55

@@ -1,0 +1,89 @@
+{
+  "selected_vf": 0.5,
+  "m_plate_kg": 0.14368,
+  "compliance_ratio": 2.4695536287229802,
+  "feasible": true,
+  "ratio_limit": 2.5,
+  "C_solid_J": 0.0036852127568300147,
+  "mesh": "80x80",
+  "element_mm": 2.0,
+  "rmin_elements": 2.5,
+  "rmin_mm": 5.0,
+  "material": {
+    "E0_Pa": 68900000000.0,
+    "nu": 0.33,
+    "rho_kg_m3": 2700.0,
+    "Emin_Pa": 68.9
+  },
+  "waterjet_outline": {
+    "area_fraction": 0.5072265625,
+    "opening_radius_mm": 3.0,
+    "min_width_check_passed": true,
+    "reanalysed_compliance_ratio": 1.9496538169878672
+  },
+  "sweep": [
+    {
+      "volfrac": 0.2,
+      "m_plate_kg": 0.08147200000000002,
+      "compliance": 0.1344727855365447,
+      "compliance_ratio": 36.489829600019334,
+      "feasible": false,
+      "grayness": 0.293198872965128,
+      "iterations": 34
+    },
+    {
+      "volfrac": 0.25,
+      "m_plate_kg": 0.09184,
+      "compliance": 0.0508390732807475,
+      "compliance_ratio": 13.795424208961762,
+      "feasible": false,
+      "grayness": 0.3162423637254519,
+      "iterations": 35
+    },
+    {
+      "volfrac": 0.3,
+      "m_plate_kg": 0.102208,
+      "compliance": 0.027679096618544157,
+      "compliance_ratio": 7.510854445851169,
+      "feasible": false,
+      "grayness": 0.3138455554547652,
+      "iterations": 60
+    },
+    {
+      "volfrac": 0.35,
+      "m_plate_kg": 0.11257599999999998,
+      "compliance": 0.018325411681371237,
+      "compliance_ratio": 4.972687573440016,
+      "feasible": false,
+      "grayness": 0.3027359747372608,
+      "iterations": 43
+    },
+    {
+      "volfrac": 0.4,
+      "m_plate_kg": 0.12294400000000003,
+      "compliance": 0.013615012725732015,
+      "compliance_ratio": 3.6944984249548516,
+      "feasible": false,
+      "grayness": 0.2900773131187535,
+      "iterations": 41
+    },
+    {
+      "volfrac": 0.45,
+      "m_plate_kg": 0.133312,
+      "compliance": 0.010886905869336586,
+      "compliance_ratio": 2.9542136608420404,
+      "feasible": false,
+      "grayness": 0.2791329459988434,
+      "iterations": 39
+    },
+    {
+      "volfrac": 0.5,
+      "m_plate_kg": 0.14368,
+      "compliance": 0.009100830536245781,
+      "compliance_ratio": 2.4695536287229802,
+      "feasible": true,
+      "grayness": 0.26670006284512165,
+      "iterations": 26
+    }
+  ]
+}

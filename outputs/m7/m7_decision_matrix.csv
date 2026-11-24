@@ -1,0 +1,10 @@
+rule,candidate_id,rank,decision_metric,budget_inr,mean_S45_across_wind_regimes,estimated_cost_inr,plain_english,status
+Knee Point,M6-Low-Cost-R24km,2,1.0,30447443.4411733,79.1348313885889,17544906.856019553,M6-Low-Cost-R24km is ranked 2 under Knee Point; normalized knee distance 1.000.,simulated
+Knee Point,M6-Knee-Balanced-R26km,1,0.5981706235051338,30447443.4411733,82.86570404629394,25073599.288004085,M6-Knee-Balanced-R26km is ranked 1 under Knee Point; normalized knee distance 0.598. Recommended by this rule.,simulated
+Knee Point,M6-High-Service-R26km,3,1.0,30447443.4411733,83.43131083165385,30447443.4411733,M6-High-Service-R26km is ranked 3 under Knee Point; normalized knee distance 1.000.,simulated
+Minimax Regret,M6-Low-Cost-R24km,2,1.0,30447443.4411733,79.1348313885889,17544906.856019553,M6-Low-Cost-R24km is ranked 2 under Minimax Regret; worst normalized combined regret 1.000.,simulated
+Minimax Regret,M6-Knee-Balanced-R26km,1,0.7389190039124829,30447443.4411733,82.86570404629394,25073599.288004085,M6-Knee-Balanced-R26km is ranked 1 under Minimax Regret; worst normalized combined regret 0.739. Recommended by this rule.,simulated
+Minimax Regret,M6-High-Service-R26km,3,1.0,30447443.4411733,83.43131083165385,30447443.4411733,M6-High-Service-R26km is ranked 3 under Minimax Regret; worst normalized combined regret 1.000.,simulated
+Best Service within Budget,M6-Low-Cost-R24km,2,79.1348313885889,30447443.4411733,79.1348313885889,17544906.856019553,"M6-Low-Cost-R24km is ranked 2 under Best Service within Budget; mean S45 79.1% at budget INR 30,447,443.",simulated
+Best Service within Budget,M6-Knee-Balanced-R26km,2,82.86570404629394,30447443.4411733,82.86570404629394,25073599.288004085,"M6-Knee-Balanced-R26km is ranked 2 under Best Service within Budget; mean S45 82.9% at budget INR 30,447,443.",simulated
+Best Service within Budget,M6-High-Service-R26km,1,83.43131083165385,30447443.4411733,83.43131083165385,30447443.4411733,"M6-High-Service-R26km is ranked 1 under Best Service within Budget; mean S45 83.4% at budget INR 30,447,443. Recommended by this rule.",simulated

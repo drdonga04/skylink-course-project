@@ -1,0 +1,9 @@
+matplotlib
+numpy
+pandas
+PyYAML
+scipy
+scikit-learn
+shapely
+simpy
+pymoo

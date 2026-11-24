@@ -1,0 +1,77 @@
+================================================================================
+SKYLINK COURSE PROJECT - DATA AUDIT REPORT
+================================================================================
+Datasets Directory: C:\Users\Hp\Codes\ED6002\Skylink Course Project\datasets
+
+--------------------------------------------------------------------------------
+(a) Hourly Demand Profile (hourly_profile.csv)
+--------------------------------------------------------------------------------
+Loaded 24 hourly profile records.
+Column sums:
+  - emergency_frac: sum = 0.9997 -> OK (sums to 1.0 within tolerance)
+  - routine_frac: sum = 1.1993 -> FLAGGED (outside 1.0 ± 1e-3, diff=0.199300)
+  - lab_frac: sum = 0.9993 -> OK (sums to 1.0 within tolerance)
+
+--------------------------------------------------------------------------------
+(b) Sites & Demand Match, Candidate Hubs (sites.csv, demand.csv)
+--------------------------------------------------------------------------------
+Total sites: 31 | Total demand records: 24
+PHC count in sites: 24 | PHC count in demand: 24
+PHC ID exact match between sites.csv and demand.csv: True
+Candidate hubs (candidate_hub == 1): ['H0', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'P09']
+Special check: P09 is both a PHC and a candidate hub: True
+
+--------------------------------------------------------------------------------
+(c) No-Fly Zones Polygon Ring Closure & Site Intersection (nofly.geojson)
+--------------------------------------------------------------------------------
+Polygon 'Civil airstrip' (idx 0, sub 0, kind: circle): Ring closed = True
+Polygon 'Reserve forest and hills' (idx 1, sub 0, kind: polygon): Ring closed = True
+OK: Zero sites lie inside any no-fly zone.
+
+--------------------------------------------------------------------------------
+(d) Components Audit (components.csv)
+--------------------------------------------------------------------------------
+1. Battery Packs:
+  - B6S-8K: Capacity=8000.0 mAh, Voltage=22.2 V, Energy=177.6 Wh (FLAGGED (outside [200, 2000] Wh)), Specific Energy=150.5 Wh/kg (~150 Wh/kg), Cost=21.96 INR/Wh (~22 INR/Wh)
+  - B6S-12K: Capacity=12000.0 mAh, Voltage=22.2 V, Energy=266.4 Wh (In range [200, 2000] Wh), Specific Energy=149.7 Wh/kg (~150 Wh/kg), Cost=22.15 INR/Wh (~22 INR/Wh)
+  - B6S-16K: Capacity=16000.0 mAh, Voltage=22.2 V, Energy=355.2 Wh (In range [200, 2000] Wh), Specific Energy=149.9 Wh/kg (~150 Wh/kg), Cost=21.96 INR/Wh (~22 INR/Wh)
+  - B6S-22K: Capacity=22000.0 mAh, Voltage=22.2 V, Energy=488.4 Wh (In range [200, 2000] Wh), Specific Energy=149.8 Wh/kg (~150 Wh/kg), Cost=21.91 INR/Wh (~22 INR/Wh)
+  - B6S-27K: Capacity=27000.0 mAh, Voltage=22.2 V, Energy=599.4 Wh (In range [200, 2000] Wh), Specific Energy=149.8 Wh/kg (~150 Wh/kg), Cost=22.02 INR/Wh (~22 INR/Wh)
+  - B6S-32K: Capacity=32000.0 mAh, Voltage=22.2 V, Energy=710.4 Wh (In range [200, 2000] Wh), Specific Energy=149.9 Wh/kg (~150 Wh/kg), Cost=21.96 INR/Wh (~22 INR/Wh)
+
+2. CFRP Tubes (Total count: 28):
+  - d/t <= 40 check: PASSED (all tubes d/t <= 40)
+  - Max d/t observed: 40.00
+  - Mass match against rho_cf = 1550 kg/m^3: difference range [-0.058%, 0.041%] (consistent)
+
+3. Motors (Total count: 5):
+  - Verification against mass formula (0.12 + 0.004 * max_thrust_N): PASSED (all exact match)
+    * M30: Max Thrust=30.0 N, Mass=0.240 kg, Expected=0.240 kg
+    * M45: Max Thrust=45.0 N, Mass=0.300 kg, Expected=0.300 kg
+    * M60: Max Thrust=60.0 N, Mass=0.360 kg, Expected=0.360 kg
+    * M80: Max Thrust=80.0 N, Mass=0.440 kg, Expected=0.440 kg
+    * M100: Max Thrust=100.0 N, Mass=0.520 kg, Expected=0.520 kg
+
+--------------------------------------------------------------------------------
+(e) Wind Profiles Audit (wind_days.csv)
+--------------------------------------------------------------------------------
+Row count: 8760 (Expected: 8760) -> OK
+Missing values: 0 | Negative values: 0
+Anomalies where gust_ms < mean_wind_ms: 0 -> OK
+Flyable hours (gust_ms < 14.0 and mean_wind_ms >= 8.0): 173 hours (1.97% of the year)
+
+--------------------------------------------------------------------------------
+(f) Costs Configuration Summary (costs.yaml)
+--------------------------------------------------------------------------------
+Currency: INR
+Discount Rate: 0.1
+Hub Capex: INR 1,800,000 | Annual Opex: INR 400,000
+Charging Bay Capex: INR 90,000 | Power: 1.5 kW
+Grid Outages: ['Mon', 'Wed', 'Fri'] from 14:00 to 17:00
+Genset backup power per hub: 3.0 kW
+Power per charging bay: 1.5 kW
+Power constraint during outages: 3.0 kW / 1.5 kW = max 2 active charging bays during Mon/Wed/Fri 14:00–17:00 outages.
+
+================================================================================
+AUDIT COMPLETED SUCCESSFULLY. REPORT SAVED.
+================================================================================

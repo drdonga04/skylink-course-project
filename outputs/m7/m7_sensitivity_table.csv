@@ -1,0 +1,6 @@
+candidate_id,scenario,year,battery_specific_energy_Wh_kg,S45,em_p95_min,road_fallback_share,cost_inr,network_choice,vehicle_choice,choice_changed,baseline_S45,status,drone_capex_multiplier,demand_growth_per_year
+M6-Low-Cost-R24km,Battery specific energy +20%,1,180.0,86.98858470552581,150.0,0.04598832712186204,17714461.77134698,R24km,R24km,False,87.8228410008071,simulated,,
+M6-Low-Cost-R24km,Drone capex -30%,1,,86.98858470552581,150.0,0.04598832712186204,16718474.587045874,R24km,R24km,False,87.8228410008071,simulated,0.7,
+M6-Low-Cost-R24km,Demand growth +15%/year,1,,86.98858470552581,150.0,0.04598832712186204,18507010.520278502,R24km,R24km,False,87.8228410008071,simulated,,0.15
+M6-Low-Cost-R24km,Demand growth +15%/year,3,,87.59583997570789,150.0,0.10446527888129668,22812939.396945518,R24km,R24km,True (Capacity expansion needed),87.8228410008071,simulated,,0.15
+M6-Low-Cost-R24km,Demand growth +15%/year,5,,86.55048633626679,150.0,0.26652804649930556,35242259.948992215,R24km,R24km,True (Capacity expansion needed),87.8228410008071,simulated,,0.15
